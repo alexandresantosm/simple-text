@@ -2,5 +2,11 @@
   "name": "simple-text",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "scripts": {
+    "script": "electron ."
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.1.2"
+  }
 }
