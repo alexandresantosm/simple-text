@@ -5,10 +5,15 @@ function createWindow () {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    titleBarStyle: "hidden",
+    alwaysOnTop: true,
     webPreferences: {
       nodeIntegration: true
     }
   })
+
+  // Remove menu task of the app
+  win.removeMenu();
 
   // and load the index.html of the app.
   win.loadFile('index.html')
