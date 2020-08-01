@@ -1,9 +1,9 @@
 {
   "name": "simple-text",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "script": "electron ."
+    "start": "electron ."
   },
   "license": "MIT",
   "devDependencies": {
