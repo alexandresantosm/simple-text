@@ -10,9 +10,85 @@
 <body>
   <div class="container">
     <header>
-        <img src="./assets/simple-text-logo.png" alt="Logo Simple Text" />
+        <div id="titlePage">
+          <img src="./assets/simple-text-logo.png" alt="Logo Simple Text" />
+          <h1>O melhor editor de texto</h1>
+        </div>
       <div class="action">
-        <button onclick="executeCommand('bold')" id="bold"><i class="fa fa-bold"></i></button>
+        <div id="button-top">
+          <div id="style-font">
+            <button for="bold" onclick="executeCommand('bold')" id="bold"><i class="fa fa-bold"></i></button>
+            <button onclick="executeCommand('italic')" id="italic"><i class="fa fa-italic"></i></button>
+            <button onclick="executeCommand('underline')" id="underline"><i class="fa fa-underline"></i></button>
+            <button onclick="executeCommand('strikeThrough')" id="strikeThrough"><i class="fa fa-strikethrough"></i></button>
+          </div>
+
+          <div id="alignment">
+            <button onclick="executeCommand('justifyLeft')" id="justifyLeft"><i class="fa fa-align-left"></i></button>
+            <button onclick="executeCommand('justifyCenter')" id="justifyCenter"><i class="fa fa-align-center"></i></button>
+            <button onclick="executeCommand('justifyRight')" id="justifyRight"><i class="fa fa-align-right"></i></button>
+            <button onclick="executeCommand('justifyFull')" id="justifyFull"><i class="fa fa-align-justify"></i></button>
+          </div>
+
+          <div id="edit">
+            <button onclick="executeCommand('cut')" id="cut"><i class="fa fa-cut"></i></button>
+            <button onclick="executeCommand('copy')" id="copy"><i class="fa fa-copy"></i></button>
+            <button onclick="executeCommand('ident')" id="ident"><i class="fa fa-indent"></i></button>
+            <button onclick="executeCommand('outdent')" id="outdent"><i class="fa fa-dedent"></i></button>
+            <button onclick="executeCommand('subscript')" id="subscript"><i class="fa fa-subscript"></i></button>
+            <button onclick="executeCommand('superscript')" id="superscript"><i class="fa fa-superscript"></i></button>
+            <button onclick="executeCommand('undo')" id="undo"><i class="fa fa-undo"></i></button>
+            <button onclick="executeCommand('redo')" id="redo"><i class="fa fa-repeat"></i></button>
+            <button onclick="executeCommand('insertParagraph')" id="paragraph"><i class="fa fa-paragraph"></i></button>
+          </div>
+
+          <div id="list">
+            <button onclick="executeCommand('insertUnorderedList')" id="unorderedList"><i class="fa fa-list-ul"></i></button>
+            <button onclick="executeCommand('insertOrderedList')" id="orderedList"><i class="fa fa-list-ol"></i></button>
+          </div>
+        </div>
+        <div id="button-down">
+          <select onchange="executeCommandWithArgument('formatBlock', this.value)" name="title" id="title">
+            <option value="h1">H1</option>
+            <option value="h2">H2</option>
+            <option value="h3">H3</option>
+            <option value="h4">H4</option>
+            <option value="h5">H5</option>
+            <option value="h6">H6</option>
+          </select>
+
+          <button onclick="executeCommand('insertHorizontalRule')" id="rule">HR</button>
+          <button onclick="executeCommandWithArgument('createLink', prompt('Enter a URL', 'http://'))" id="link"><i class="fa fa-link"></i></button>
+          <button onclick="executeCommand('unlink')" id="unlink"><i class="fa fa-unlink"></i></button>
+          <button onclick="toggleSource()" id="code"><i class="fa fa-code"></i></button>
+          <button onclick="toggleEdit()" id="toggleEdit">Toggle Edit</button>
+
+          <select onchange="executeCommandWithArgument('fontName', this.value)" name="font-family" id="font-family">
+            <option value="Arial">Arial<Arialption>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Courier">Courier</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Tahoma">Tahoma</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+          </select>
+
+          <select onchange="executeCommandWithArgument('fontSize', this.value)" name="font-size" id="font-size">
+            <option value="1">1<Arialption>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+          </select>
+
+          Fore Color: <input type="color" onchange="executeCommandWithArgument('foreColor', this.value)" />
+          Background: <input type="color" onchange="executeCommandWithArgument('hiliteColor', this.value)"/>
+
+          <button onclick="executeCommandWithArgument('insertImage', prompt('Enter the image URL', ''))" id="image"><i class="fa fa-file-image-o"></i></button>
+          <button onclick="executeCommand('selectAll')" id="selectAll">Select All</button>
+        </div>
       </div>
     </header>
     <main>
