@@ -1,6 +1,7 @@
 :root {
   --color-gray-light: #F5F5F5;
   --color-gray-medium: #E5E5E5;
+  --color-gray-dark: #718093;
 }
 
 * {
@@ -17,23 +18,46 @@ html, body {
 body .container {
   height: 100%;
   width: 100%;
+  padding: 1%;
 }
 
 body header {
-  padding: 2% 2%;
+  height: 100%;
+  width: 100%;
 }
 
-body header img {
+#titlePage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header #titlePage img {
   height: 80px;
   width: 80px;
   margin-bottom: 1%;
+}
+
+header #titlePage h1 {
+  margin-left: 16px;
+  margin-right: 50px;
 }
 
 header .action {
   padding: 1% 1%;
   height: 100%;
   width: 100%;
+  border: 2px solid var(--color-gray-medium);
   background-color: var(--color-gray-light);
+}
+
+#button-top, #button-down {
+  display: flex;
+  justify-content: space-between;
+}
+
+#button-down {
+  margin-top: 16px;
 }
 
 header .action button {
@@ -41,8 +65,20 @@ header .action button {
   width: 32px;
 }
 
+i {
+  padding-top: 8px;
+  height: 100%;
+  width: 100%;
+}
+
+button i.active {
+  background-color: var(--color-gray-dark);
+}
+
 body main {
-  padding: 1% 1%;
+  height: 100%;
+  width: 100%;
+  padding-top: 1%;
 }
 
 body main iframe {
@@ -53,11 +89,18 @@ body main iframe {
 }
 
 body footer {
-  padding: 1% 1%;
   text-align: center;
 }
 
 body footer img {
   height: 50px;
   width: 50px;
+}
+
+#toggleEdit {
+  width: 56px;
+}
+
+#selectAll {
+  width: 56px;
 }
