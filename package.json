@@ -4,7 +4,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "nodemon --watch index.html --watch style.css --exec electron ."
+    "dev": "nodemon --watch index.html --watch style.css --watch main.js --exec electron ."
   },
   "license": "MIT",
   "devDependencies": {
