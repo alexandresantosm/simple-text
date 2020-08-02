@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "nodemon --watch index.html --watch style.css --exec electron ."
   },
   "license": "MIT",
   "devDependencies": {
-    "electron": "^9.1.2"
+    "electron": "^9.1.2",
+    "nodemon": "^2.0.4"
   }
 }
